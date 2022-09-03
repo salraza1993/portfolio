@@ -1,0 +1,215 @@
+@import 'variables';
+$headerHeight: 75px;
+
+@media (min-width: 320px) and (max-width: 767px) {
+  :root {
+    --fs-lg: clamp(1.5rem, calc(5vw + 1rem), 2.75rem);
+  }
+  .container {
+    padding-right: var(--bs-gutter-x, 5vw);
+    padding-left: var(--bs-gutter-x, 5vw);
+  }
+
+  header {
+    .subHeader {
+      height: $headerHeight;
+      > div {
+        .logoBlock {
+          width: min-content;
+          height: 140px;
+          font-size: calc(1.5rem + 2vw);
+          line-height: calc(1.5rem + 2vw);
+          padding: calc(1rem + 1vw);
+        }
+        .navigation {
+          position: absolute;
+          .mobileMenu {
+            position: relative;
+            background-color: #ccc;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: calc(1rem + 2vw);
+          }
+          .topMenus {
+            display: none !important;
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba($primary, 0.85);
+            backdrop-filter: blur(4px);
+            top: 0;
+            left: 0;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            padding: calc(1rem + 2.5vw);
+            li {
+              width: 100%;
+              text-align: center;
+              &:not(:last-child) {
+                margin-right: 0;
+              }
+              a {
+                padding: 1rem 0;
+                display: block;
+                font-size: calc(1rem + 1vw);
+                width: 100%;
+                color: $white;
+                border-radius: 50px;
+                &.active {
+                  background-color: $secondary;
+                  color: $primary;
+                }
+              }
+            }
+            .closePopup {
+              position: absolute;
+              width: 40px;
+              height: 40px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              top: 4vw;
+              right: 4vw;
+              font-size: calc(2rem + 1vw);
+              color: $white;
+              border-radius: 4px;
+            }
+          
+          }
+        }
+      }
+    }
+  }
+
+  .aboutSection {
+    padding: 20vh 0 12vh;
+    .aboutSubSection {
+      flex-direction: column;
+      .profileImage {
+        max-width: inherit;
+        height: auto;
+        margin-bottom: 5vh;
+      }
+    }
+  }
+
+  .workSection {
+    $paddingY: 25vh;
+    $width: 100vw;
+    padding: $paddingY 0 $paddingY - 10vh;
+    .workSubSection {
+      .behindBgContainer {
+        top: -$paddingY;
+        max-width: $width;
+        left: 0;
+        border-radius: 0;
+        .knowMoreButton { bottom: 5rem; }
+      }
+      .behindBgContainer {
+        height: calc(100% + #{$paddingY * 1.7});
+      }
+      .projectsContainer .projectCardContainer {
+        padding: 0 5vw 5vh;
+      }
+    }
+  }
+
+  .editorSectionContainer {display: none;}
+  
+  .skillSection {
+    margin-bottom: 8vh;
+    padding: 8vh 0;
+    .skillHeadingContainer {
+      flex-direction: column;
+      .content {
+        margin-top: 3vh;
+        column-count: 1;
+        max-width: 100%;
+        p:not(:last-child) {margin-bottom: 1rem;}
+      }   
+    }
+    .skillCardSec {
+      margin-top: 7vh;
+      .skillCardCont {
+        padding: 0 5vw;
+        .skillCard { width: 320px; min-width: 320px; }
+      }
+    }
+  }
+  footer {
+    padding-bottom: 13vh;
+    .footerSocialMedia .social {
+      justify-content: space-between;
+      li {
+        // overflow: hidden;
+        > a {
+          font-size: calc(1.75rem + 1vw);
+        }
+        .tooltipData {
+          display: none !important;
+        }
+        &:hover {
+          > a {
+            background-color: $primary;
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+  .heroSection {
+    .container { max-width: 100%; }
+    .heroSubSection {
+      height: calc(100vh - #{$headerHeight});
+      .content {
+        max-width: calc(100% - 1vw);
+        padding: 0 3vw;
+        .shortText { max-width: calc(90% + 1vw); }
+      }
+    }
+    .scroller { height: 12vh; }
+  }
+
+  .workSection .workSubSection .projectsContainer .projectCardContainer .projectCard {
+    max-width: 320px;
+    min-width: 320px;
+  }
+  .hidden-xs { display: none !important; }
+
+}
+@media (min-width: 576px) {
+    $gapX: calc(calc(100vw - 540px) / 2);
+    .skillSection .skillCardSec .skillCardCont,
+    .workSection .workSubSection .projectsContainer .projectCardContainer { padding-left: $gapX; padding-right: $gapX; }
+    .hidden-sm { display: none !important; }
+}
+
+@media (min-width: 768px) {
+  $gapX: calc(calc(100vw - 720px) / 2);
+  .skillSection .skillCardSec .skillCardCont,
+  .workSection .workSubSection .projectsContainer .projectCardContainer { padding-left: $gapX; padding-right: $gapX; }
+  .hidden-md { display: none !important; }
+}
+@media (min-width: 992px) {
+    $gapX: calc(calc(100vw - 960px) / 2);
+    .skillSection .skillCardSec .skillCardCont,
+    .workSection .workSubSection .projectsContainer .projectCardContainer { padding-left: $gapX; padding-right: $gapX; }
+    .hidden-lg { display: none !important; }
+}
+@media (min-width: 1200px) {
+    $gapX: calc(calc(100vw - 1140px) / 2);
+    .skillSection .skillCardSec .skillCardCont,
+    .workSection .workSubSection .projectsContainer .projectCardContainer { padding-left: $gapX; padding-right: $gapX; }
+    .hidden-xl { display: none !important; }
+}
+@media (min-width: 1400px) {
+    $gapX: calc(calc(100vw - 1320px) / 2);
+    .skillSection .skillCardSec .skillCardCont,
+    .workSection .workSubSection .projectsContainer .projectCardContainer { padding-left: $gapX; padding-right: $gapX; }
+    .hidden-xxl { display: none !important; }
+}
