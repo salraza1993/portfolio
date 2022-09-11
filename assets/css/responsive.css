@@ -4,11 +4,27 @@
   --percentageColor: ;
   --percentageBarColor: ;
   --bgColor: ;
-  --logoUrl: url('../images/react.svg');
+  --logoUrl: url("../images/react.svg");
   --fs-xl: clamp(2.25rem, calc(6vw + 1rem), 5rem);
   --fs-lg: clamp(2rem, calc(6vw + 1rem), 3.75rem);
   --fs-md: clamp(1.5rem, calc(1.08vw + 1rem), 2.75rem);
   --fs-sm: clamp(1.25rem, calc(1vw + 1rem), 2rem);
+  --header-height: 100px;
+  --primary: #0b0087;
+  --secondary: #fff700;
+  --primary-rgb: 11, 0, 135;
+  --secondary-rgb: 255, 247, 0;
+  --white: #fff;
+  --white-rgb: 255, 255, 255;
+  --black: #000;
+  --black-rgb: 0,0,0;
+  --success: green;
+  --gilroy-bold: "gilroyextrabold";
+  --gilroy-light: "gilroylight";
+  --roboto: "Roboto", sans-serif;
+  --montserrat: "Montserrat", sans-serif;
+  --transition: all 0.3s ease-in;
+  --editor-height: 1250px;
 }
 
 /* ==================== variables ====================== */
@@ -40,15 +56,9 @@
     background-color: #ccc;
     width: 40px;
     height: 40px;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: center;
+    align-items: center;
     font-size: calc(1rem + 2vw);
   }
   header .subHeader > div .navigation .topMenus {
@@ -61,16 +71,9 @@
             backdrop-filter: blur(4px);
     top: 0;
     left: 0;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 1rem;
     padding: calc(1rem + 2.5vw);
   }
@@ -97,15 +100,9 @@
     position: absolute;
     width: 40px;
     height: 40px;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: center;
+    align-items: center;
     top: 4vw;
     right: 4vw;
     font-size: calc(2rem + 1vw);
@@ -116,10 +113,7 @@
     padding: 20vh 0 12vh;
   }
   .aboutSection .aboutSubSection {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
   .aboutSection .aboutSubSection .profileImage {
     max-width: inherit;
@@ -152,15 +146,12 @@
     padding: 8vh 0;
   }
   .skillSection .skillHeadingContainer {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
   .skillSection .skillHeadingContainer .content {
     margin-top: 3vh;
-    -webkit-column-count: 1;
-            column-count: 1;
+    -moz-column-count: 1;
+         column-count: 1;
     max-width: 100%;
   }
   .skillSection .skillHeadingContainer .content p:not(:last-child) {
@@ -180,9 +171,7 @@
     padding-bottom: 13vh;
   }
   footer .footerSocialMedia .social {
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    justify-content: space-between;
   }
   footer .footerSocialMedia .social li > a {
     font-size: calc(1.75rem + 1vw);
@@ -218,59 +207,53 @@
     display: none !important;
   }
 }
-
 @media (min-width: 576px) {
   .skillSection .skillCardSec .skillCardCont,
-  .workSection .workSubSection .projectsContainer .projectCardContainer {
-    padding-left: calc(calc(100vw - 540px) / 2);
-    padding-right: calc(calc(100vw - 540px) / 2);
+.workSection .workSubSection .projectsContainer .projectCardContainer {
+    padding-left: calc((100vw - 540px) / 2);
+    padding-right: calc((100vw - 540px) / 2);
   }
   .hidden-sm {
     display: none !important;
   }
 }
-
 @media (min-width: 768px) {
   .skillSection .skillCardSec .skillCardCont,
-  .workSection .workSubSection .projectsContainer .projectCardContainer {
-    padding-left: calc(calc(100vw - 720px) / 2);
-    padding-right: calc(calc(100vw - 720px) / 2);
+.workSection .workSubSection .projectsContainer .projectCardContainer {
+    padding-left: calc((100vw - 720px) / 2);
+    padding-right: calc((100vw - 720px) / 2);
   }
   .hidden-md {
     display: none !important;
   }
 }
-
 @media (min-width: 992px) {
   .skillSection .skillCardSec .skillCardCont,
-  .workSection .workSubSection .projectsContainer .projectCardContainer {
-    padding-left: calc(calc(100vw - 960px) / 2);
-    padding-right: calc(calc(100vw - 960px) / 2);
+.workSection .workSubSection .projectsContainer .projectCardContainer {
+    padding-left: calc((100vw - 960px) / 2);
+    padding-right: calc((100vw - 960px) / 2);
   }
   .hidden-lg {
     display: none !important;
   }
 }
-
 @media (min-width: 1200px) {
   .skillSection .skillCardSec .skillCardCont,
-  .workSection .workSubSection .projectsContainer .projectCardContainer {
-    padding-left: calc(calc(100vw - 1140px) / 2);
-    padding-right: calc(calc(100vw - 1140px) / 2);
+.workSection .workSubSection .projectsContainer .projectCardContainer {
+    padding-left: calc((100vw - 1140px) / 2);
+    padding-right: calc((100vw - 1140px) / 2);
   }
   .hidden-xl {
     display: none !important;
   }
 }
-
 @media (min-width: 1400px) {
   .skillSection .skillCardSec .skillCardCont,
-  .workSection .workSubSection .projectsContainer .projectCardContainer {
-    padding-left: calc(calc(100vw - 1320px) / 2);
-    padding-right: calc(calc(100vw - 1320px) / 2);
+.workSection .workSubSection .projectsContainer .projectCardContainer {
+    padding-left: calc((100vw - 1320px) / 2);
+    padding-right: calc((100vw - 1320px) / 2);
   }
   .hidden-xxl {
     display: none !important;
   }
-}
-/*# sourceMappingURL=responsive.css.map */
+}/*# sourceMappingURL=responsive.css.map */

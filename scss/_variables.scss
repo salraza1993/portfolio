@@ -10,7 +10,29 @@
     --fs-lg: clamp(2rem, calc(6vw + 1rem), 3.75rem);
     --fs-md: clamp(1.5rem, calc(1.08vw + 1rem), 2.75rem);
     --fs-sm: clamp(1.25rem, calc(1vw + 1rem), 2rem);
+
+    --header-height: 100px;
+    // $blue: #AF0C15;
+    --primary: #0b0087;
+    --secondary: #fff700;
+    --primary-rgb: 11, 0, 135;
+    --secondary-rgb: 255, 247, 0;
+    --white: #fff;
+    --white-rgb: 255, 255, 255;
+    --black: #000;
+    --black-rgb: 0,0,0;
+    --success: green;
+    // $blue: #AF0C15;
+    
+    
+    --gilroy-bold: "gilroyextrabold";
+    --gilroy-light: "gilroylight";
+    --roboto: "Roboto", sans-serif;
+    --montserrat: "Montserrat", sans-serif;
+    --transition: all 0.3s ease-in;
+    --editor-height: 1250px;
 }
+
 /* ==================== variables ====================== */
 $headerHeight: 100px;
 // $blue: #AF0C15;

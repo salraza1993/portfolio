@@ -210,6 +210,9 @@ $headerHeight: 75px;
 @media (min-width: 1400px) {
     $gapX: calc(calc(100vw - 1320px) / 2);
     .skillSection .skillCardSec .skillCardCont,
-    .workSection .workSubSection .projectsContainer .projectCardContainer { padding-left: $gapX; padding-right: $gapX; }
+    .workSection .workSubSection .projectsContainer .projectCardContainer { 
+      padding-left: $gapX; 
+      padding-right: $gapX; 
+    }
     .hidden-xxl { display: none !important; }
 }
